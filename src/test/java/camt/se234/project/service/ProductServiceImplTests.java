@@ -46,4 +46,16 @@ public class ProductServiceImplTests {
       when(productDao.findAll()).thenReturn(mockProduct);
       assertThat(productService.getAvailableProducts());
    }
+
+   @Test
+   public void getUnavailableProductSize(){
+      ProductServiceImpl productService = new ProductServiceImpl();
+      productService.setProductDao(productDao);
+      List<Product> mockProduct = new ArrayList<>();
+      mockProduct.add(new Product(111L,"11","Book","Book for student","image",100.00));
+      mockProduct.add(new Product(112L,"12","Pen","For write","image",25.75));
+      mockProduct.add(new Product(113L,"13","Eraser","For removing writing from paper","image",19.00));
+      when(productDao.findAll()).thenReturn(mockProduct);
+      assertThat(productService.getUnavailableProductSize());
+   }
 }
