@@ -4,4 +4,6 @@ import camt.se234.project.entity.User;
 
 public interface UserDao {
     User getUser(String username, String password);
+
+
 }

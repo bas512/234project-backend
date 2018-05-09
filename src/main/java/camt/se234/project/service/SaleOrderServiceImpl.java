@@ -1,6 +1,7 @@
 package camt.se234.project.service;
 
 import camt.se234.project.dao.OrderDao;
+import camt.se234.project.dao.OrderDaoImpl;
 import camt.se234.project.entity.SaleOrder;
 import camt.se234.project.entity.SaleTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class SaleOrderServiceImpl implements SaleOrderService {
         }
         return saleOrder;
     }
+
+
 
     @Override
     public List<SaleOrder> getSaleOrders() {
