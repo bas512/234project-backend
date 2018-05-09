@@ -12,11 +12,14 @@ import java.util.List;
 
 @Service
 public class SaleOrderServiceImpl implements SaleOrderService {
+
     OrderDao orderDao;
     @Autowired
     public void setOrderDao(OrderDao orderDao) {
         this.orderDao = orderDao;
     }
+
+
 
     @Override
     @Transactional
@@ -25,7 +28,6 @@ public class SaleOrderServiceImpl implements SaleOrderService {
         for (SaleTransaction transaction :
                 saleOrder.getTransactions()) {
             transaction.setOrder(saleOrder);
-
         }
         return saleOrder;
     }
