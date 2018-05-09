@@ -32,4 +32,8 @@ public class SaleOrder {
         }
         return totalPrice;
     }
+//        public String getSaleOrders(Long id, String saleOrderId){
+//        this.id = id;
+//        this.saleOrderId = saleOrderId;
+//    }
 }

@@ -24,7 +24,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void getAllProducts(){
+   public void testGetAllProducts(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
@@ -36,7 +36,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void getAvailableProducts(){
+   public void testGetAvailableProducts(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
@@ -48,7 +48,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void getUnavailableProductSize(){
+   public void testGetUnavailableProductSize(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
