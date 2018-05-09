@@ -36,7 +36,7 @@ public class AuthenticationServiceImplTest {
         when(userDao.getUser("ccc","003")).thenReturn(new User(null,"ccc","003","user"));
 
         assertThat(userDao.getUser("aaa","001"),is(new User(null,"aaa","001","admin")));
-        
+
 
     }
 }
