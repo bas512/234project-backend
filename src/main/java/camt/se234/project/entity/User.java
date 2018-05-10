@@ -41,17 +41,5 @@ public class User {
         return Objects.hash(getId(), getUsername(), getPassword(), getRole());
     }
 
-//    public User(String username,String password){
-//        this.username = username;
-//        this.password = password;
-//
-//    }
-//
-//    public String getUsername(){
-//        return username;
-//    }
-//
-//    public String getPassword(){
-//        return password;
-//    }
 }
+

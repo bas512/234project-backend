@@ -31,11 +31,11 @@ public class AuthenticationServiceImplTest {
 
     @Test
     public void authenticate(){
-        when(userDao.getUser("aaa","001")).thenReturn(new User(null,"aaa","001","admin"));
-        when(userDao.getUser("bbb","002")).thenReturn(new User(null,"bbb","002","user"));
+        when(userDao.getUser("admin","admin")).thenReturn(new User(null,"admin","admin","admin"));
+        when(userDao.getUser("user","user")).thenReturn(new User(null,"user","user","user"));
         when(userDao.getUser("ccc","003")).thenReturn(new User(null,"ccc","003","user"));
 
-        assertThat(userDao.getUser("aaa","001"),is(new User(null,"aaa","001","admin")));
+        assertThat(userDao.getUser("admin","admin"),is(new User(null,"admin","admin","admin")));
 
 
     }
