@@ -10,5 +10,5 @@ services:
      - "8077:80"
     volumes:
       - type: bind
-        source: ./setting
+        source: ./project/setting
         target: /usr/share/nginx/html/assets
