@@ -1,10 +1,14 @@
 package camt.se234.project;
 
-
+import camt.se234.project.dao.UserDao;
+import camt.se234.project.dao.UserDaoImpl;
 import camt.se234.project.entity.Product;
 import camt.se234.project.entity.SaleOrder;
 import camt.se234.project.entity.SaleTransaction;
+import camt.se234.project.entity.User;
 import camt.se234.project.repository.ProductRepository;
+import camt.se234.project.service.AuthenticationService;
+import camt.se234.project.service.AuthenticationServiceImpl;
 import camt.se234.project.service.SaleOrderService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,8 +20,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
+import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
+import static org.mockito.Mockito.mock;
 
 
 
