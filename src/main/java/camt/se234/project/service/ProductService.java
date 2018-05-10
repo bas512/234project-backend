@@ -8,4 +8,5 @@ public interface ProductService {
     List<Product> getAllProducts();
     List<Product> getAvailableProducts();
     int getUnavailableProductSize();
+
 }

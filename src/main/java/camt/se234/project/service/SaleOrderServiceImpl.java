@@ -12,6 +12,7 @@ import java.util.List;
 
 @Service
 public class SaleOrderServiceImpl implements SaleOrderService {
+
     OrderDao orderDao;
     @Autowired
     public void setOrderDao(OrderDao orderDao) {
@@ -25,12 +26,9 @@ public class SaleOrderServiceImpl implements SaleOrderService {
         for (SaleTransaction transaction :
                 saleOrder.getTransactions()) {
             transaction.setOrder(saleOrder);
-
         }
         return saleOrder;
     }
-
-
 
     @Override
     public List<SaleOrder> getSaleOrders() {
@@ -41,10 +39,10 @@ public class SaleOrderServiceImpl implements SaleOrderService {
     public double getAverageSaleOrderPrice() {
         List<SaleOrder> orders = orderDao.getOrders();
         double totalPrice = 0;
-        for (SaleOrder order :
-                orders) {
+        for (SaleOrder order : orders) {
             totalPrice += order.getTotalPrice();
         }
         return totalPrice/orders.size();
     }
+
 }

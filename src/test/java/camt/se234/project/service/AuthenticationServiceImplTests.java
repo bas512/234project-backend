@@ -1,4 +1,10 @@
-package camt.se234.project.sevice;
+package camt.se234.project.service;
+
+import camt.se234.project.dao.UserDao;
+import camt.se234.project.dao.UserDaoImpl;
+import camt.se234.project.entity.User;
+import org.junit.Before;
+import org.junit.Test;
 
 import camt.se234.project.dao.UserDao;
 import camt.se234.project.dao.UserDaoImpl;
@@ -16,7 +22,7 @@ import static org.hamcrest.core.IsNull.notNullValue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
-public class AuthenticationServiceImplTest {
+public class AuthenticationServiceImplTests {
 
     UserDao userDao;
     AuthenticationServiceImpl authenticationService;

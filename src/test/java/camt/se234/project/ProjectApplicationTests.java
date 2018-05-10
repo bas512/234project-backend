@@ -24,6 +24,8 @@ import static org.hamcrest.Matchers.*;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.mockito.Mockito.mock;
 
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ProjectApplicationTests {
@@ -57,9 +59,5 @@ public class ProjectApplicationTests {
         assertThat(result.getId(),is(notNullValue()));
 
     }
-
-
-
-
 
 }

@@ -40,4 +40,13 @@ public class ProductServiceImpl implements ProductService {
 
         return getAllProducts().size() - getAvailableProducts().size();
     }
+
+    public double getAverageSaleOrderPrice() {
+        double total = 0;
+        for(Product product: this.productDao.findAll()){
+            total += product.getPrice();
+        }
+       return total/this.productDao.findAll().size();
+    }
+
 }

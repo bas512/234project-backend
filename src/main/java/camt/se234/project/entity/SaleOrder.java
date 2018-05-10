@@ -4,7 +4,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Cascade;
 
 import javax.persistence.*;
 
@@ -21,6 +20,14 @@ public class SaleOrder {
     @GeneratedValue(strategy = GenerationType.AUTO)
     Long id;
     String saleOrderId;
+    String product;
+
+    public SaleOrder(String saleOrderId,String product){
+        this.id = id;
+        this.saleOrderId = saleOrderId;
+        this.product = product;
+    }
+
     @Builder.Default
     @OneToMany(mappedBy = "order", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     List<SaleTransaction> transactions = new ArrayList<>();
@@ -32,4 +39,5 @@ public class SaleOrder {
         }
         return totalPrice;
     }
+
 }
