@@ -41,5 +41,6 @@ public class User {
         return Objects.hash(getId(), getUsername(), getPassword(), getRole());
     }
 
+
 }
 
