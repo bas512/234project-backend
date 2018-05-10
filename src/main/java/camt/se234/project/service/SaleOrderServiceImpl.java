@@ -1,7 +1,6 @@
 package camt.se234.project.service;
 
 import camt.se234.project.dao.OrderDao;
-import camt.se234.project.entity.Product;
 import camt.se234.project.entity.SaleOrder;
 import camt.se234.project.entity.SaleTransaction;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,8 +17,6 @@ public class SaleOrderServiceImpl implements SaleOrderService {
     public void setOrderDao(OrderDao orderDao) {
         this.orderDao = orderDao;
     }
-
-
 
     @Override
     @Transactional
@@ -41,8 +38,7 @@ public class SaleOrderServiceImpl implements SaleOrderService {
     public double getAverageSaleOrderPrice() {
         List<SaleOrder> orders = orderDao.getOrders();
         double totalPrice = 0;
-        for (SaleOrder order :
-                orders) {
+        for (SaleOrder order : orders) {
             totalPrice += order.getTotalPrice();
         }
         return totalPrice/orders.size();

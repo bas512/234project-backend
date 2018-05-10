@@ -2,6 +2,7 @@ package camt.se234.project.service;
 
 import camt.se234.project.dao.ProductDao;
 import camt.se234.project.entity.Product;
+import org.hamcrest.MatcherAssert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -24,7 +25,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void testGetAllProducts(){
+   public void testGetAllProductsWithMock(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
@@ -36,7 +37,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void testGetAvailableProducts(){
+   public void testGetAvailableProductsWithMock(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
@@ -48,7 +49,7 @@ public class ProductServiceImplTests {
    }
 
    @Test
-   public void testGetUnavailableProductSize(){
+   public void testGetUnavailableProductSizeWithMock(){
       ProductServiceImpl productService = new ProductServiceImpl();
       productService.setProductDao(productDao);
       List<Product> mockProduct = new ArrayList<>();
@@ -58,4 +59,5 @@ public class ProductServiceImplTests {
       when(productDao.findAll()).thenReturn(mockProduct);
       assertThat(productService.getUnavailableProductSize());
    }
+
 }
