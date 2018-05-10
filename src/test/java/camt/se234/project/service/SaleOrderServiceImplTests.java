@@ -38,7 +38,8 @@ public class SaleOrderServiceImplTests {
         mockSaleOrder.add(new SaleOrder("112","002"));
         mockSaleOrder.add(new SaleOrder("114","003"));
         when(orderDao.getOrders()).thenReturn(mockSaleOrder);
-        assertThat(saleOrderService.getSaleOrders(),hasItems(new SaleOrder("111","001"),new SaleOrder("112","002"), new SaleOrder("114","003")));
+        assertThat(saleOrderService.getSaleOrders(),hasItems(new SaleOrder("111","001"),
+                new SaleOrder("112","002"), new SaleOrder("114","003")));
     }
 
     @Test
