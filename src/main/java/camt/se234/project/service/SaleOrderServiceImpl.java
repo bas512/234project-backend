@@ -30,8 +30,6 @@ public class SaleOrderServiceImpl implements SaleOrderService {
         return saleOrder;
     }
 
-
-
     @Override
     public List<SaleOrder> getSaleOrders() {
         return orderDao.getOrders();

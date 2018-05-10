@@ -16,9 +16,9 @@ public class OrderDaoImpl implements OrderDao {
     List<SaleOrder> saleOrders;
     public OrderDaoImpl(){
         saleOrders = new ArrayList<>();
-        saleOrders.add(new SaleOrder(111L,"001"));
-        saleOrders.add(new SaleOrder(112L,"002"));
-        saleOrders.add(new SaleOrder(113L,"003"));
+        saleOrders.add(new SaleOrder("111","001"));
+        saleOrders.add(new SaleOrder("112","002"));
+        saleOrders.add(new SaleOrder("113","003"));
     }
 
     @Override
