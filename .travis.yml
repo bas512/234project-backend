@@ -1,5 +1,6 @@
 language: java
 before_install:
+- chmod +x mvnw
 - curl -L https://github.com/docker/compose/releases/download/3.3/docker-compose-`uname -s`-`uname -m` > ./docker-compose
 - sudo mv ./docker-compose /usr/bin/docker-compose
 - sudo chmod +x /usr/bin/docker-compose
