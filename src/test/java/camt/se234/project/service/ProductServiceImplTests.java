@@ -19,7 +19,7 @@ import static org.mockito.Mockito.when;
 public class ProductServiceImplTests {
    ProductDao productDao;
    ProductServiceImpl productService;
-   
+
 
    @Before
     public void setup(){
