@@ -10,9 +10,5 @@ services:
      - "8077:80"
     volumes:
       - type: bind
-<<<<<<< HEAD
         source: ./project234/setting
-=======
-        source: ./Project234/setting
->>>>>>> master
         target: /usr/share/nginx/html/assets
